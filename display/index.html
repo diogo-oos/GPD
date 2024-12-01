@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coletor de Notícias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>Coletor de Notícias</h1>
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar notícias...">
+        </div>
+        <button id="searchButton" onclick="searchNews()">Pesquisar</button>
+    </div>
+    
+    <div id="loading" class="loading">Carregando...</div>
+
+    <div id="newsContainer"></div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
